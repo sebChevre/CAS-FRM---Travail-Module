@@ -21,6 +21,9 @@ Et récupérer le projet compilé dans le répertoire 'dist'
 ### back
 Répertoire content le livrable jar compilé. A exécuter avec la commande suivante:
 ```java -jar frm-back.jar```
+Le serveur tourne sur le port 9090 (http://localhost:9090)
 
 
 ### front
+Répertoire du prjet angular 4 compilé.Il n'y a qu'a lancer le fichier index.html dans le navigateur. Il faut au préalable que le serveur (projet back) soit exécuté.
+
