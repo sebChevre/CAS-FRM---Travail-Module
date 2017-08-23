@@ -1,0 +1,10 @@
+ch/sebooom/frmbackend/Application.class
+ch/sebooom/frmbackend/service/impl/TacheServiceImpl.class
+ch/sebooom/frmbackend/transformer/JsonTransformer.class
+ch/sebooom/frmbackend/HelloDTO.class
+ch/sebooom/frmbackend/repository/impl/InMemoryTacheRepository.class
+ch/sebooom/frmbackend/repository/TacheRepository.class
+ch/sebooom/frmbackend/domain/Tache.class
+ch/sebooom/frmbackend/ResponseDTO.class
+ch/sebooom/frmbackend/service/TacheService.class
+ch/sebooom/frmbackend/domain/Etat.class

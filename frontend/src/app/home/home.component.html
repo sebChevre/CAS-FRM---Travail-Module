@@ -1,0 +1,62 @@
+<div id="home">
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h2>Liste des tâches</h2>
+        </div>
+
+        <div class="panel-body">
+            <table class="table table-striped" style="background-color: white; color: black">
+
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Description</th>
+                    <th>Etat</th>
+                    <th>Assigne</th>
+                    <th>Durée [H]</th>
+                    <th></th>
+                </tr>
+                </thead>
+
+                <tbody>
+
+
+                <tr *ngFor="let result of results">
+                    <td>{{result.id}}</td>
+                    <td data-title="'Name'">{{result.description}}</td>
+                    <td data-title="'Status'" >{{result.etat}}</td>
+                    <td data-title="'Start Date'" >{{result.assignea}}</td>
+                    <td data-title="'Start Date'" >{{result.duree}}</td>
+
+                    <td style="width:30px;">
+                        <button type="button" class="btn btn-danger" (click)="delete(result.id)">Supprimer</button>
+                    </td>
+                    <td style="width:30px;">
+                        <button type="button" class="btn btn-warning" (click)="update(result.id)">Modifier</button>
+                    </td>
+
+                    <td *ngIf="result.etat=='A_FAIRE'" style="width:30px;">
+                        <button type="button" class="btn btn-success" (click)="start(result.id)">Commencer</button>
+                    </td>
+
+                    <td *ngIf="result.etat=='EN_COURS'" style="width:30px;">
+                        <button type="button" class="btn btn-info" (click)="end(result.id)">Terminer</button>
+                    </td>
+
+                </tr>
+                </tbody>
+
+            </table>
+
+            <button type="button" class="btn btn-info btn-lg" (click)="create()">Créer une tâche</button>
+
+        </div>
+
+    </div>
+
+
+
+    <detail [display]="displayDetailForm" (submit)="afterSave($event)"></detail>
+</div>
+

@@ -1,0 +1,45 @@
+<div id="detail">
+    <div *ngIf="display" class="panel panel-default">
+
+        <div class="panel-heading">
+            <h2>Détail de la tâche</h2>
+        </div>
+
+        <div class="panel-body">
+
+            <form [formGroup]="detailForm" (ngSubmit)="save(detailForm.value)" role="form">
+
+                <div class="form-group">
+                    <label for="desc">Description</label>
+                    <input type="text" class="form-control" id="desc" placeholder="Description de la tâche" formControlName="description">
+                </div>
+
+                <div class="form-group">
+                    <label for="state">Etat</label>
+                    <select class="form-control" id="state" formControlName="etat">
+                        <option value="A_FAIRE">A Réaliser</option>
+                        <option value="EN_COURS">En cours</option>
+                        <option value="TERMINE">Terminé</option>
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Durée [H]</label>
+                    <input style="width:200px;" type="number" min="1" max="50" class="form-control" id="exampleInputPassword1" placeholder="Durée de la tâche" formControlName="duree">
+                </div>
+
+                <div class="form-group">
+                    <label for="assignea">Assigné à</label>
+                    <input type="text" class="form-control" id="assignea" placeholder="Utilisateur assigné" formControlName="assigneA">
+                </div>
+
+                <button type="submit" class="btn btn-success">Enregistrer</button>
+                <button type="reset" class="btn btn-danger">Effacer</button>
+                <button type="button" (click)="hideForm()" class="btn btn-danger">Annuler</button>
+            </form>
+
+        </div>
+    </div>
+
+</div>
