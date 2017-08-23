@@ -6,7 +6,7 @@
 ## backend
 Sources java8 du projet back (api REST) basé sur le framework Spark
 
-Pour buulder le projet:
+Pour builder le projet:
 ```mvn clean compile assembly:single```
 Et récupérer le jar compilé dans le répertoire 'target'
 ## frontend
@@ -19,5 +19,8 @@ Et récupérer le projet compilé dans le répertoire 'dist'
 ## Livrable
 
 ### back
+Répertoire content le livrable jar compilé. A exécuter avec la commande suivante:
+```java -jar frm-back.jar```
+
 
 ### front
